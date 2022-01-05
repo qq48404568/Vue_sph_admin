@@ -184,7 +184,7 @@ $light_gray:#eee;
   width: 100%;
   background-color: $bg;
   overflow: hidden;
-  background: url(~@/assets/1.jpg);
+  background: url(~@/assets/2.jpg);
   background-size: 100% 100%;
 
   .login-form {
