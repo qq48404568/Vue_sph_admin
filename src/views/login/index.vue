@@ -114,6 +114,7 @@ export default {
           this.$store.dispatch('user/login', this.loginForm).then(() => {
             this.$router.push({ path: this.redirect || '/' })
             this.loading = false
+            this.$message.success('登录成功')
           }).catch(() => {
             this.loading = false
           })
@@ -186,7 +187,7 @@ $light_gray:#eee;
   overflow: hidden;
   background: url(~@/assets/2.jpg);
   background-size: 100% 100%;
-
+  opacity: 0.9;
   .login-form {
     position: relative;
     width: 520px;
