@@ -2,7 +2,7 @@
  * @Description: 
  * @Author: RyangXie
  * @Date: 2022-01-03 21:03:12
- * @LastEditTime: 2022-01-08 11:05:03
+ * @LastEditTime: 2022-01-08 17:40:35
  * @LastEditors: RyangXie
  * @Reference: 
 -->
@@ -54,6 +54,7 @@
       <!-- 添加属性|修改属性的结构 -->
       <div v-show="!isShowTable">
         <el-form label-width="80px"
+                 :inline="true"
                  :model="attrInfo">
           <el-form-item label="属性名">
             <el-input placeholder="请输入属性名"
