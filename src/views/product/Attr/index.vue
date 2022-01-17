@@ -2,7 +2,7 @@
  * @Description: 
  * @Author: RyangXie
  * @Date: 2022-01-03 21:03:12
- * @LastEditTime: 2022-01-08 17:40:35
+ * @LastEditTime: 2022-01-08 23:11:54
  * @LastEditors: RyangXie
  * @Reference: 
 -->
@@ -39,14 +39,15 @@
           </el-table-column>
           <el-table-column label="操作"
                            width="150">
-            <template slot-scope="{row}">
+            <template slot-scope="{row,$index}">
               <el-button type="warning"
                          icon="el-icon-edit"
                          size="mini"
                          @click="updateAttr(row)"></el-button>
               <el-button type="danger"
                          icon="el-icon-delete"
-                         size="mini"></el-button>
+                         size="mini"
+                         @click="deleteAttrValues(row)"></el-button>
             </template>
           </el-table-column>
         </el-table>
@@ -103,8 +104,7 @@
           </el-table-column>
         </el-table>
         <el-button type="primary"
-                   @click="addOrUpdateAttr"
-                   :disabled="attrInfo.attrValueList.length<1">保存</el-button>
+                   @click="addOrUpdateAttr">保存</el-button>
         <el-button @click="isShowTable=true">取消</el-button>
       </div>
     </el-card>
